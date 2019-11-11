@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Route, Switch, HashRouter } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Calendar from "./components/Calendar";
+import CalendarMonth from "./components/CalendarMonth";
+import "./App.css";
+
+export default class App extends Component {
+  render() {
+    return (
+      <Calendar>
+        <HashRouter>
+          <Switch>
+            <Route component={CalendarMonth} path="/:year/:month" />
+            <Route component={CalendarMonth} exact path="/" />
+          </Switch>
+        </HashRouter>
+      </Calendar>
+    );
+  }
 }
-
-export default App;

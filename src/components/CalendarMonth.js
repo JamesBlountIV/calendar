@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-// import TheMonth from
-// import TheWeekDays from
-// import TheDay from
+import TheMonth from "./TheMonth";
+import TheWeekDays from "./TheWeekDays";
+import TheDay from "./TheDay";
 import moment, { weekdays } from "moment";
 
 export default class CalendarMonth extends Component {
@@ -83,7 +83,7 @@ export default class CalendarMonth extends Component {
         delete props["firstDayIndex"];
       }
 
-      days.push(<Day key={i} {...props} />);
+      days.push(<TheDay key={i} {...props} />);
     }
 
     return days;

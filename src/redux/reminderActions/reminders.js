@@ -27,18 +27,18 @@ const deleteReminderAction = (date, id) => {
 
 export const createReminder = payload => {
   return dispatch => {
-    dispatch.createReminderAction(payload);
+    dispatch(createReminderAction)(payload);
   };
 };
 
 export const updateReminder = payload => {
   return dispatch => {
-    dispatch.updateReminderAction(payload);
+    dispatch(updateReminderAction)(payload);
   };
 };
 
 export const deleteReminder = (date, id) => {
   return dispatch => {
-    dispatch.deleteReminderAction(date, id);
+    dispatch(deleteReminderAction)(date, id);
   };
 };

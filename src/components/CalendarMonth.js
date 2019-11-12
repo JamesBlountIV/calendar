@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import TheMonth from "./TheMonth";
 import TheWeekDays from "./TheWeekDays";
 import TheDay from "./TheDay";
-import moment, { weekdays } from "moment";
+import moment from "moment";
 
 export default class CalendarMonth extends Component {
   state = {
@@ -90,7 +90,7 @@ export default class CalendarMonth extends Component {
   }
 
   render() {
-    const weekDays = moment.weekdays();
+    const weekdays = moment.weekdays();
     const days = this.buildDays();
     return (
       <div className="month">

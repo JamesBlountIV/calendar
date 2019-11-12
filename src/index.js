@@ -14,7 +14,7 @@ import thunk from "redux-thunk";
 import reminders from "./redux/reminderReducer/reminders";
 
 //redux chrome dev extenstion
-const composeEnhancers =
+const composeEnhancers = () =>
   process.env.NODE_ENV === "development"
     ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
     : null || compose;
